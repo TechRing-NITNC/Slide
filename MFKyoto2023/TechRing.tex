@@ -3,13 +3,19 @@
 \usetheme[numbering=counter,shape=square]{LightTheme}
 %パッケージ
 \usepackage{pxjahyper}
+\usepackage{tikz}
+%tikzライブラリ
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.callouts}
 %フォント
 \renewcommand{\kanjifamilydefault}{\gtdefault}
 
 %タイトル設定
 \title{TechRingにかける想い}
 \subtitle{学科を超えて}
-\author[TechRing]{奈良高専TechRing}
+\author[Jin]{石田　優仁}
+\institute[TechRing]{奈良高専TechRing}
 \date[2023/04/30]{2023/04/30}
 
 \begin{document}
@@ -20,6 +26,7 @@
 
   \begin{block}{国立高等専門学校の特徴}
     \begin{itemize}
+      \setlength{\itemsep}{1mm}
       \item 5年制、一貫のカリキュラム
       \item 電気電子系や機械系に限らず、物質や建築、商船もある
       \item 高専祭という文化祭での文化発表が活発
@@ -30,6 +37,7 @@
 
   \begin{alertblock}{奈良高専の特徴}
       \begin{itemize}
+        \setlength{\itemsep}{1mm}
         \item 来年で創設60周年を迎える
         \item 機械、電気、電子制御、情報、物質科学の5学科
         \item 最寄り駅からバスで20分ほど
@@ -39,25 +47,50 @@
 
 \end{frame}
 
-\begin{frame}{起業家工房について}
+\begin{frame}{高専スタートアップ事業について}{時代は大高専時代に...}
 
-  \begin{alertblock}{高等専門学校スタートアップ教育環境整備事業}
+  \begin{alertblock}{高専スタートアップ事業概要}
       \begin{itemize}
-        \item アントレプレナーシップ教育に取り組む\\
+        \setlength{\itemsep}{1mm}
+        \item アントレプレナーシップ教育に取り組究極の
         国公私立高専の戦略的な取組に必要な経費を補助
         \item 高専生の活動を後押しし\\
-        学生が自らの技術を用いた地域の社会課題解決に取り組み
-        \item 予算は57高専で合計\alert{60億円}
+        学生が自らの技術を用いた社会課題解決に取り組み
+        \item 予算は57高専で合計\alert{60億円}も
       \end{itemize}
   \end{alertblock}
 
-  \begin{exampleblock}{起業家工房}
-    
-  \end{exampleblock}
+  \begin{center}
+    \begin{tikzpicture}
+      \draw[-{Latex[length=5mm]},line width = 3pt,red] (0,.7) -- (0,0);
+    \end{tikzpicture}
+  \end{center}
+
+  \vspace{-3.5mm}
+
+  \begin{greyblock}{スタートアップ事業STEP}
+    \begin{enumerate}
+      \setlength{\itemsep}{1mm}
+      \item アントレプレナーシップや企業について知る
+      \item 高専生のチャレンジを応援するための環境整備\\
+      $\Rightarrow$\alert{起業家工房}の整備
+      \item 地域社会の課題解決に挑戦
+    \end{enumerate}
+  \end{greyblock}
 \end{frame}
 
 \begin{frame}{TechRingとは？}
-  TechRingとは何か、自己紹介
+    \begin{description}[一つの輪に]
+      \item[学科の壁] 各学科には様々な長所や短所が混在するが...\par
+      各学科が壁で隔てられ、\\長所を活かすことも短所を補うこともできない！\par
+      \hspace{0.3\textwidth}
+      \begin{tikzpicture}
+        \draw[-{Latex[length=5mm]},line width = 3pt,red] (0,.7) -- (0,0);
+      \end{tikzpicture}
+      \vspace{-1.5mm}
+      \item[一つの輪に] 学科を超えた相互補完型の交流で\\究極のアントレプレナーシップを目指す！
+    \end{description}
+
 \end{frame}
 
 \begin{frame}{TechRingの目的}
