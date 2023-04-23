@@ -1,9 +1,11 @@
 \documentclass[dvipdfmx]{beamer}
 %テーマ
-\usetheme[numbering=counter,shape=square]{LightTheme}
+\usetheme[numbering=counter,shape=pentagon]{LightTheme}
 %パッケージ
 \usepackage{pxjahyper}
 \usepackage{tikz}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{xcolor}
 %tikzライブラリ
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{positioning}
@@ -20,7 +22,12 @@
 
 \begin{document}
 
-\maketitle
+\begin{frame}[plain,noframenumbering]
+  \begin{flushright}
+      \includegraphics[width=2.3cm]{pic/Logo.png}
+  \end{flushright}
+  \titlepage
+\end{frame}
 
 \begin{frame}{高専どんなところ？}
 
@@ -52,7 +59,7 @@
   \begin{alertblock}{高専スタートアップ事業概要}
       \begin{itemize}
         \setlength{\itemsep}{1mm}
-        \item アントレプレナーシップ教育に取り組究極の
+        \item アントレプレナーシップ教育に取り組む\\
         国公私立高専の戦略的な取組に必要な経費を補助
         \item 高専生の活動を後押しし\\
         学生が自らの技術を用いた社会課題解決に取り組み
@@ -60,15 +67,17 @@
       \end{itemize}
   \end{alertblock}
 
+  \vspace{-3mm}
+
   \begin{center}
     \begin{tikzpicture}
       \draw[-{Latex[length=5mm]},line width = 3pt,red] (0,.7) -- (0,0);
     \end{tikzpicture}
   \end{center}
 
-  \vspace{-3.5mm}
+  \vspace{-4.5mm}
 
-  \begin{greyblock}{スタートアップ事業STEP}
+  \begin{greyblock}{高専スタートアップ事業STEP}
     \begin{enumerate}
       \setlength{\itemsep}{1mm}
       \item アントレプレナーシップや企業について知る
@@ -80,71 +89,489 @@
 \end{frame}
 
 \begin{frame}{TechRingとは？}
-    \begin{description}[一つの輪に]
-      \item[学科の壁] 各学科には様々な長所や短所が混在するが...\par
-      各学科が壁で隔てられ、\\長所を活かすことも短所を補うこともできない！\par
-      \hspace{0.3\textwidth}
-      \begin{tikzpicture}
-        \draw[-{Latex[length=5mm]},line width = 3pt,red] (0,.7) -- (0,0);
-      \end{tikzpicture}
-      \vspace{-1.5mm}
-      \item[一つの輪に] 学科を超えた相互補完型の交流で\\究極のアントレプレナーシップを目指す！
+
+  \begin{description}[一つの輪に]
+    \item[学科の壁] 各学科には様々な長所や短所が混在するが...\par
+    各学科が壁で隔てられ、\\長所を活かすことも短所を補うこともできない！\par
+    \hspace{0.3\textwidth}
+    \begin{tikzpicture}
+      \draw[-{Latex[length=5mm]},line width = 3pt,red] (0,.7) -- (0,0);
+    \end{tikzpicture}
+    \vspace{-1.5mm}
+    \item[一つの輪に] 学科を超えた相互補完型の交流で\\\structure{究極のアントレプレナーシップ}を目指す！
+  \end{description}
+
+  \begin{columns}
+    \begin{column}{0.55\textwidth}
+      \begin{center}
+        \begin{block}{TechRing ３つの起業}
+          \vspace{2mm}
+          \begin{enumerate}
+            \setlength{\itemsep}{3mm}
+            \item 学科交流イベントの起業
+            \item 技術交流プロジェクトの起業
+            \item 共同開発プロジェクトの起業
+          \end{enumerate}
+        \end{block}
+      \end{center}
+    \end{column}
+
+    \begin{column}{0.40\textwidth}
+      \begin{center}
+        \begin{tikzpicture}[scale=1.4]
+          %座標設定
+          \coordinate (A) at (0,-.1);
+          \coordinate (B) at (0,1);
+          \coordinate (C) at ({cos(9*pi/10 r)},{sin(9*pi/10 r)});
+          \coordinate (D) at ({cos(13*pi/10 r)},{sin(13*pi/10 r)});
+          \coordinate (E) at ({cos(17*pi/10 r)},{sin(17*pi/10 r)});
+          \coordinate (F) at ({cos(21*pi/10 r)},{sin(21*pi/10 r)});
+          %線引き
+          \draw[line width = 2pt] (F)--(B)--(C)--(D)--(E)--cycle;
+          %nodeのスタイル指定
+          \tikzset{block/.style={circle,white,fill=cyan,minimum size=1cm,inner sep=.5pt}};
+          %node（テキストボックス的な）を指定座標に配置
+          \node[inner sep=0pt] at (A) {\includegraphics[width=1.5cm]{pic/Logo.png}};
+          \node[block] at (B) {\footnotesize MeCafe};
+          \node[block] at (C) {\footnotesize メカ研};
+          \node[block] at (D) {\footnotesize 電研};
+          \node[block] at (E) {\footnotesize シス研};
+          \node[block] at (F) {\footnotesize 情研};
+        \end{tikzpicture}
+      \end{center}
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
+\begin{frame}{TechRing ３つの目的 その１}
+  \begin{greyblock}{学科を超えた技術交流とその起業のために}
+    \vspace{1mm}
+    \begin{footnotesize}
+      \begin{itemize}
+        \item \alert{学内技術イベントを計画・運営}
+        \item \alert{学内ロボットコンテストの共同開催}
+        \item \alert{高専祭学科展にて相互連携}
+        \item TechRing内技術交流
+        \item 他高専の有志・団体との交流
+        \item 各種コンテスト、展示会への出場
+        \item 共同開発プロジェクトの企画
+        \item チャレンジプロジェクトに参加
+      \end{itemize}
+    \end{footnotesize}
+  \end{greyblock}
+
+  \begin{columns}
+    \begin{column}{0.30\textwidth}
+      \begin{alertblock}{学内イベント}
+        \begin{footnotesize}
+          TechRing ３つの起業
+          \begin{enumerate}
+            \item 学科交流\\Eventの起業
+          \end{enumerate}
+        \end{footnotesize}
+      \end{alertblock}
+    \end{column}
+
+    \begin{column}{0.30\textwidth}
+      \begin{block}{技術交流}
+        \begin{footnotesize}
+          TechRing ３つの起業
+          \begin{enumerate}
+            \setcounter{enumi}{1}
+            \item 技術交流\\Projectの起業
+          \end{enumerate}
+        \end{footnotesize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.30\textwidth}
+      \begin{block}{共同制作}
+        \begin{footnotesize}
+          TechRing ３つの起業 \par
+          \begin{enumerate}
+            \setcounter{enumi}{2}
+            \item 共同開発\\Projectの起業
+          \end{enumerate}
+        \end{footnotesize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{TechRing ３つの活動 その１}{イベント運営}
+  \begin{columns}
+    \begin{column}{0.55\textwidth}
+      \begin{alertblock}{TechCafe}
+        \begin{itemize}
+          \item 年に一度の学内一大\\LTイベントとして開催
+          \item 技術発表に限らない\\幅広いテーマ設定
+          \item 高専祭のアフターイベント\\としてバックアップ
+        \end{itemize}
+      \end{alertblock}
+
+      \begin{block}{他にも}
+        \begin{footnotesize}
+          \begin{itemize}
+            \item 高専祭学科展にて連携
+            \item 定期的な学科交流イベント
+            \item 学内ロボコンできたらいいな
+          \end{itemize}
+        \end{footnotesize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.4\textwidth}
+      \includegraphics[width=4.5cm]{pic/TechCafe.png}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{TechRing ３つの目的 その２}
+  \begin{greyblock}{学科を超えた技術交流とその起業のために}
+    \vspace{1mm}
+    \begin{footnotesize}
+      \begin{itemize}
+        \item 学内技術イベントを計画・運営
+        \item 学内ロボットコンテストの共同開催
+        \item 高専祭学科展にて相互連携
+        \item \alert{TechRing内技術交流}
+        \item \alert{他高専の有志・団体との交流}
+        \item \alert{各種コンテスト、展示会への出場}
+        \item 共同開発プロジェクトの企画
+        \item チャレンジプロジェクトに参加
+      \end{itemize}
+    \end{footnotesize}
+  \end{greyblock}
+
+  \begin{columns}
+    \begin{column}{0.30\textwidth}
+      \begin{block}{学内イベント}
+        \begin{footnotesize}
+          TechRing ３つの起業
+          \begin{enumerate}
+            \item 学科交流\\Eventの起業
+          \end{enumerate}
+        \end{footnotesize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.30\textwidth}
+      \begin{alertblock}{技術交流}
+        \begin{footnotesize}
+          TechRing ３つの起業
+          \begin{enumerate}
+            \setcounter{enumi}{1}
+            \item 技術交流\\Projectの起業
+          \end{enumerate}
+        \end{footnotesize}
+      \end{alertblock}
+    \end{column}
+
+    \begin{column}{0.30\textwidth}
+      \begin{block}{共同制作}
+        \begin{footnotesize}
+          TechRing ３つの起業 \par
+          \begin{enumerate}
+            \setcounter{enumi}{2}
+            \item 共同開発\\Projectの起業
+          \end{enumerate}
+        \end{footnotesize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{TechRing ３つの活動 その２}{技術交流}
+  \begin{alertblock}{TechRingミーティング}
+    \begin{itemize}
+      \item 定期的な活動報告会
+      \item 他団体からノウハウを借りる講演や実習の開催
+    \end{itemize}
+  \end{alertblock}
+
+  \begin{alertblock}{Maker Faire Kyoto 2023 出展}
+    \begin{itemize}
+      \item 各団体が製作した製作品のアウトプット
+      \item 共同展示によって連携し、奈良高専全体の広報にも
+    \end{itemize}
+  \end{alertblock}
+
+  \begin{block}{製作品外部公開}
+    \begin{itemize}
+      \item Twitterを使用した発信
+      \item 外部公開によって奈良高専外部との交流も深める
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{TechRing ３つの目的 その３}
+  \begin{greyblock}{学科を超えた技術交流とその起業のために}
+    \vspace{1mm}
+    \begin{footnotesize}
+      \begin{itemize}
+        \item 学内技術イベントを計画・運営
+        \item 学内ロボットコンテストの共同開催
+        \item 高専祭学科展にて相互連携
+        \item TechRing内技術交流
+        \item 他高専の有志・団体との交流
+        \item \alert{各種コンテスト、展示会への出場}
+        \item \alert{共同開発プロジェクトの企画}
+        \item \alert{チャレンジプロジェクトに参加}
+      \end{itemize}
+    \end{footnotesize}
+  \end{greyblock}
+
+  \begin{columns}
+    \begin{column}{0.30\textwidth}
+      \begin{block}{学内イベント}
+        \begin{footnotesize}
+          TechRing ３つの起業
+          \begin{enumerate}
+            \item 学科交流\\Eventの起業
+          \end{enumerate}
+        \end{footnotesize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.30\textwidth}
+      \begin{block}{技術交流}
+        \begin{footnotesize}
+          TechRing ３つの起業
+          \begin{enumerate}
+            \setcounter{enumi}{1}
+            \item 技術交流\\Projectの起業
+          \end{enumerate}
+        \end{footnotesize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.30\textwidth}
+      \begin{alertblock}{共同制作}
+        \begin{footnotesize}
+          TechRing ３つの起業 \par
+          \begin{enumerate}
+            \setcounter{enumi}{2}
+            \item 共同開発\\Projectの起業
+          \end{enumerate}
+        \end{footnotesize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{TechRing ３つの活動 その３}{共同開発}
+  \begin{columns}
+    \begin{column}{0.63\textwidth}
+      \begin{block}{開発環境の整備}
+        \begin{itemize}
+          \item 起業家工房の環境を整備
+          \item 起業家工房による\\有志個人のものづくり支援も
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.28\textwidth}
+      \begin{center}
+        \includegraphics[width=2.5cm]{pic/Team.png}
+      \end{center}
+    \end{column}
+  \end{columns}
+
+  \begin{alertblock}{共同開発プロジェクト}
+    \begin{itemize}
+      \item 学科を跨いだ人員を確保し、コンテスト共同参加も
+      \item 共同で製作した製作品の展示、アウトプット
+      \item 広く外部公開し、学外有志の意見も取り入れフィードバック
+      \item 製作したモノの担当したパートを各団体に持ち帰って共有
+    \end{itemize}
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{TechRingの組成}{３つの起業を５つの団体で}
+  \begin{block}{何処から誰を招集するか}
+    \vspace{2mm}
+    \begin{description}
+      \setlength{\itemsep}{2mm}
+      \item[招集基準] 各学科を代表する団体を招集したい
+      \item[判断素材] 高専祭学科展の展示に携わった経験のある団体
+      \item[招集結果] ４学科から５団体の参加が確定！
     \end{description}
+  \end{block}
 
+  \begin{center}
+    \begin{tikzpicture}
+      \draw[-{Latex[length=5mm]},line width = 3pt,red] (0,.7) -- (0,0);
+    \end{tikzpicture}
+  \end{center}
+
+  \begin{Large}
+    各学科各団体の\alert{長所を活かし} \vfill \hspace{5em}\alert{短所を補う}プロジェクトとして発足！
+  \end{Large}
 \end{frame}
 
-\begin{frame}{TechRingの目的}
-  TechRingの目指す目的を紹介
-\end{frame}
-
-\begin{frame}{TechRingの担う学内活動 その１}{イベント開催}
-  奈良高専生に向けてイベントを開催する話\\
-  LTイベントや何か製作イベントなど
-\end{frame}
-
-\begin{frame}{TechRingの担う学内活動 その２}{技術交流}
-  5団体でノウハウや活動の共有をしたり、\\
-  コンテストの共同参加やその他技術交流に関する話
-\end{frame}
-
-\begin{frame}{TechRingの担う学内活動 その３}{共同制作}
-  技術交流を通して共同で制作をする話\\
-  共同制作したものを外部公開する話
-\end{frame}
-
-\begin{frame}{TechRingを創る仲間たち その１}{機械研究会}
+\begin{frame}{TechRingを創る仲間たち その１}{MeCafe}
   機械研究会にフォーカス\\
   活動の紹介と出展の紹介を
+  \begin{textblock*}{0.4\linewidth}(280pt,180pt)
+    \begin{tikzpicture}[scale=1]
+      %座標設定
+      \coordinate (A) at (0,-.1);
+      \coordinate (B) at (0,1);
+      \coordinate (C) at ({cos(9*pi/10 r)},{sin(9*pi/10 r)});
+      \coordinate (D) at ({cos(13*pi/10 r)},{sin(13*pi/10 r)});
+      \coordinate (E) at ({cos(17*pi/10 r)},{sin(17*pi/10 r)});
+      \coordinate (F) at ({cos(21*pi/10 r)},{sin(21*pi/10 r)});
+      %線引き
+      \draw[line width = 2pt] (F)--(B)--(C)--(D)--(E)--cycle;
+      %nodeのスタイル指定
+      \tikzset{block/.style={circle,white,fill=cyan,minimum size=.85cm,inner sep=0pt}};
+      %node（テキストボックス的な）を指定座標に配置
+      \node[inner sep=0pt] at (A) {\includegraphics[width=1cm]{pic/Logo.png}};
+      \node[block,fill=LightUIRed] at (B) {\scriptsize MeCafe};
+      \node[block] at (C) {\scriptsize メカ研};
+      \node[block] at (D) {\scriptsize 電研};
+      \node[block] at (E) {\scriptsize シス研};
+      \node[block] at (F) {\scriptsize 情研};
+    \end{tikzpicture}
+  \end{textblock*}
 \end{frame}
 
-\begin{frame}{TechRingを創る仲間たち その２}{MeCafe}
+\begin{frame}{TechRingを創る仲間たち その２}{機械研究会}
   MeCafeにフォーカス\\
   活動の紹介と出展の紹介を
+  \begin{textblock*}{0.4\linewidth}(280pt,180pt)
+    \begin{tikzpicture}[scale=1]
+      %座標設定
+      \coordinate (A) at (0,-.1);
+      \coordinate (B) at (0,1);
+      \coordinate (C) at ({cos(9*pi/10 r)},{sin(9*pi/10 r)});
+      \coordinate (D) at ({cos(13*pi/10 r)},{sin(13*pi/10 r)});
+      \coordinate (E) at ({cos(17*pi/10 r)},{sin(17*pi/10 r)});
+      \coordinate (F) at ({cos(21*pi/10 r)},{sin(21*pi/10 r)});
+      %線引き
+      \draw[line width = 2pt] (F)--(B)--(C)--(D)--(E)--cycle;
+      %nodeのスタイル指定
+      \tikzset{block/.style={circle,white,fill=cyan,minimum size=.85cm,inner sep=0pt}};
+      %node（テキストボックス的な）を指定座標に配置
+      \node[inner sep=0pt] at (A) {\includegraphics[width=1cm]{pic/Logo.png}};
+      \node[block] at (B) {\scriptsize MeCafe};
+      \node[block,fill=LightUIRed] at (C) {\scriptsize メカ研};
+      \node[block] at (D) {\scriptsize 電研};
+      \node[block] at (E) {\scriptsize シス研};
+      \node[block] at (F) {\scriptsize 情研};
+    \end{tikzpicture}
+  \end{textblock*}
 \end{frame}
 
 \begin{frame}{TechRingを創る仲間たち その３}{電気技術研究会}
   電気技術研究会にフォーカス\\
   活動の紹介と出展の紹介を
+  \begin{textblock*}{0.4\linewidth}(280pt,180pt)
+    \begin{tikzpicture}[scale=1]
+      %座標設定
+      \coordinate (A) at (0,-.1);
+      \coordinate (B) at (0,1);
+      \coordinate (C) at ({cos(9*pi/10 r)},{sin(9*pi/10 r)});
+      \coordinate (D) at ({cos(13*pi/10 r)},{sin(13*pi/10 r)});
+      \coordinate (E) at ({cos(17*pi/10 r)},{sin(17*pi/10 r)});
+      \coordinate (F) at ({cos(21*pi/10 r)},{sin(21*pi/10 r)});
+      %線引き
+      \draw[line width = 2pt] (F)--(B)--(C)--(D)--(E)--cycle;
+      %nodeのスタイル指定
+      \tikzset{block/.style={circle,white,fill=cyan,minimum size=.85cm,inner sep=0pt}};
+      %node（テキストボックス的な）を指定座標に配置
+      \node[inner sep=0pt] at (A) {\includegraphics[width=1cm]{pic/Logo.png}};
+      \node[block] at (B) {\scriptsize MeCafe};
+      \node[block] at (C) {\scriptsize メカ研};
+      \node[block,fill=LightUIRed] at (D) {\scriptsize 電研};
+      \node[block] at (E) {\scriptsize シス研};
+      \node[block] at (F) {\scriptsize 情研};
+    \end{tikzpicture}
+  \end{textblock*}
 \end{frame}
 
 \begin{frame}{TechRingを創る仲間たち その４}{システム開発研究会}
   システム開発研究会にフォーカス\\
   活動の紹介
+  \begin{textblock*}{0.4\linewidth}(280pt,180pt)
+    \begin{tikzpicture}[scale=1]
+      %座標設定
+      \coordinate (A) at (0,-.1);
+      \coordinate (B) at (0,1);
+      \coordinate (C) at ({cos(9*pi/10 r)},{sin(9*pi/10 r)});
+      \coordinate (D) at ({cos(13*pi/10 r)},{sin(13*pi/10 r)});
+      \coordinate (E) at ({cos(17*pi/10 r)},{sin(17*pi/10 r)});
+      \coordinate (F) at ({cos(21*pi/10 r)},{sin(21*pi/10 r)});
+      %線引き
+      \draw[line width = 2pt] (F)--(B)--(C)--(D)--(E)--cycle;
+      %nodeのスタイル指定
+      \tikzset{block/.style={circle,white,fill=cyan,minimum size=.85cm,inner sep=0pt}};
+      %node（テキストボックス的な）を指定座標に配置
+      \node[inner sep=0pt] at (A) {\includegraphics[width=1cm]{pic/Logo.png}};
+      \node[block] at (B) {\scriptsize MeCafe};
+      \node[block] at (C) {\scriptsize メカ研};
+      \node[block] at (D) {\scriptsize 電研};
+      \node[block,fill=LightUIRed] at (E) {\scriptsize シス研};
+      \node[block] at (F) {\scriptsize 情研};
+    \end{tikzpicture}
+  \end{textblock*}
 \end{frame}
 
 \begin{frame}{TechRingを創る仲間たち その５}{情報処理研究会}
   情報処理研究会にフォーカス\\
   活動の紹介と出展の紹介を
+  \begin{textblock*}{0.4\linewidth}(280pt,180pt)
+    \begin{tikzpicture}[scale=1]
+      %座標設定
+      \coordinate (A) at (0,-.1);
+      \coordinate (B) at (0,1);
+      \coordinate (C) at ({cos(9*pi/10 r)},{sin(9*pi/10 r)});
+      \coordinate (D) at ({cos(13*pi/10 r)},{sin(13*pi/10 r)});
+      \coordinate (E) at ({cos(17*pi/10 r)},{sin(17*pi/10 r)});
+      \coordinate (F) at ({cos(21*pi/10 r)},{sin(21*pi/10 r)});
+      %線引き
+      \draw[line width = 2pt] (F)--(B)--(C)--(D)--(E)--cycle;
+      %nodeのスタイル指定
+      \tikzset{block/.style={circle,white,fill=cyan,minimum size=.85cm,inner sep=0pt}};
+      %node（テキストボックス的な）を指定座標に配置
+      \node[inner sep=0pt] at (A) {\includegraphics[width=1cm]{pic/Logo.png}};
+      \node[block] at (B) {\scriptsize MeCafe};
+      \node[block] at (C) {\scriptsize メカ研};
+      \node[block] at (D) {\scriptsize 電研};
+      \node[block] at (E) {\scriptsize シス研};
+      \node[block,fill=LightUIRed] at (F) {\scriptsize 情研};
+    \end{tikzpicture}
+  \end{textblock*}
 \end{frame}
 
-\begin{frame}{TechRingのこれから}
-  TechRingの今後の活動を紹介
-\end{frame}
+\begin{frame}{TechRingのこれから}{アッと驚く技術を、もっと広く世界へ}
+  \begin{block}{大高専時代へ}
+    \vspace{2mm}
+    \begin{description}
+      \setlength{\itemsep}{2mm}
+      \item[創造の意欲] 学内イベントの開催により\\
+      創作活動のモチベーションを上げ、活発化を目指す
+      \item[幅広い視野] 学外への技術発信を行い\\
+      アウトプットからフィードバックを得る
+      \item[自立と友愛] チーム開発の経験から\\
+      仲間とのコミュニケーションの重要さを学ぶ
+    \end{description}
+  \end{block}
 
-\begin{frame}
+  \vfill
+
   \begin{Large}
-    ご清聴、ありがとうございました。
+    モノを作るだけではなく \vfill \hspace{7em}\alert{コトを起こす}ものづくりを
   \end{Large}
+\end{frame}
+
+\begin{frame}[plain,noframenumbering]
+  \begin{center}
+    \begin{Large}
+      ご清聴、ありがとうございました。
+    \end{Large}
+  \end{center}
 \end{frame}
 
 \end{document}
