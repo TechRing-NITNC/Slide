@@ -411,10 +411,56 @@
 \end{frame}
 
 \begin{frame}{TechRingを創る仲間たち その１}{MeCafe}
-  MeCafeにフォーカス\\
-  活動の紹介と出展の紹介を
-  \begin{textblock*}{0.4\linewidth}(280pt,180pt)
-    \begin{tikzpicture}[scale=1]
+
+  \vspace{-2mm}
+  
+  \begin{minipage}{0.85\textwidth}
+    \begin{block}{活動内容}
+      \begin{itemize}
+        \item 自分の中の「アイディア」を「カタチ」に
+        \item モノを使ったコトづくりを
+      \end{itemize}
+    \end{block}
+  \end{minipage}
+
+  \begin{columns}[totalwidth=1.02\textwidth]
+    \begin{column}{.3\textwidth}
+      \begin{footnotesize}
+        \begin{alertblock}{\normalsize Generative Design}
+            \begin{center}
+              パラメータから\\
+              AIが設計案を導出\\
+            \includegraphics[scale=.02,angle=-90]{pic/mecafe1.jpg}
+            \end{center}
+        \end{alertblock}
+      \end{footnotesize}
+    \end{column}
+    \begin{column}{.3\textwidth}
+      \begin{footnotesize}
+        \begin{alertblock}{テキサンラジコンカー}
+          \begin{center}
+            MGを加工して\\
+            ラジコンカーを製作\\
+            \includegraphics[scale=.02]{pic/mecafe3.jpg}
+          \end{center}
+        \end{alertblock}
+      \end{footnotesize}
+    \end{column}
+    \begin{column}{.3\textwidth}
+      \begin{footnotesize}
+        \begin{alertblock}{\normalsize 金属3Dプリント}
+          \begin{center}
+            金属の3Dプリンターで\\
+            様々なモノを製作\\
+            \includegraphics[scale=.02,angle=-90]{pic/mecafe2.jpg}
+          \end{center}
+        \end{alertblock}
+      \end{footnotesize}
+    \end{column}
+  \end{columns}
+
+  \begin{textblock*}{0.4\linewidth}(300pt,5pt)
+    \begin{tikzpicture}[scale=.8]
       %座標設定
       \coordinate (A) at (0,-.1);
       \coordinate (B) at (0,1);
@@ -425,14 +471,14 @@
       %線引き
       \draw[line width = 2pt] (F)--(B)--(C)--(D)--(E)--cycle;
       %nodeのスタイル指定
-      \tikzset{block/.style={circle,white,fill=cyan,minimum size=.85cm,inner sep=0pt}};
+      \tikzset{block/.style={circle,white,fill=cyan,minimum size=.65cm,inner sep=0pt}};
       %node（テキストボックス的な）を指定座標に配置
-      \node[inner sep=0pt] at (A) {\includegraphics[width=1cm]{pic/Logo.png}};
-      \node[block,fill=LightUIRed] at (B) {\scriptsize MeCafe};
-      \node[block] at (C) {\scriptsize メカ研};
-      \node[block] at (D) {\scriptsize 電研};
-      \node[block] at (E) {\scriptsize シス研};
-      \node[block] at (F) {\scriptsize 情研};
+      \node[inner sep=0pt] at (A) {\includegraphics[width=.7cm]{pic/Logo.png}};
+      \node[block,fill=LightUIRed] at (B) {\tiny MeCafe};
+      \node[block] at (C) {\tiny メカ研};
+      \node[block] at (D) {\tiny 電研};
+      \node[block] at (E) {\tiny シス研};
+      \node[block] at (F) {\tiny 情研};
     \end{tikzpicture}
   \end{textblock*}
 \end{frame}
@@ -493,10 +539,49 @@
 \end{frame}
 
 \begin{frame}{TechRingを創る仲間たち その３}{電気技術研究会}
-  電気技術研究会にフォーカス\\
-  活動の紹介と出展の紹介を
-  \begin{textblock*}{0.4\linewidth}(280pt,180pt)
-    \begin{tikzpicture}[scale=1]
+
+  \vspace{-2mm}
+  
+  \begin{minipage}{0.85\textwidth}
+    \begin{block}{活動内容}
+      \begin{itemize}
+        \item 高専祭展示品製作
+        \item 各種コンテストの参加
+        \item 電子工作から衛星の電波受信まで幅広く活動
+      \end{itemize}
+    \end{block}
+  \end{minipage}
+
+  \vspace{-2mm}
+
+  \begin{columns}[totalwidth=\textwidth]
+    \begin{column}{.48\textwidth}
+      \begin{footnotesize}
+        \begin{alertblock}{\normalsize Ele Mag Harmony}
+            \begin{center}
+              ソレノイドやステッピングモータ\\
+              FDDやリレーで音楽を演奏\\
+            \includegraphics[scale=.035]{pic/denken1.jpg}
+            \end{center}
+        \end{alertblock}
+      \end{footnotesize}
+    \end{column}
+    \begin{column}{.48\textwidth}
+      \begin{footnotesize}
+        \begin{alertblock}{\normalsize Nixie Clock \& LED Matrix}
+          \begin{center}
+            ニキシー管で時計を製作\\
+            \includegraphics[scale=.06]{pic/denken2.jpg}\\
+            LED Matrixでアニメーション\\
+            \includegraphics[scale=.08]{pic/denken3.jpg}
+          \end{center}
+        \end{alertblock}
+      \end{footnotesize}
+    \end{column}
+  \end{columns}
+
+  \begin{textblock*}{0.4\linewidth}(300pt,5pt)
+    \begin{tikzpicture}[scale=.8]
       %座標設定
       \coordinate (A) at (0,-.1);
       \coordinate (B) at (0,1);
@@ -507,19 +592,21 @@
       %線引き
       \draw[line width = 2pt] (F)--(B)--(C)--(D)--(E)--cycle;
       %nodeのスタイル指定
-      \tikzset{block/.style={circle,white,fill=cyan,minimum size=.85cm,inner sep=0pt}};
+      \tikzset{block/.style={circle,white,fill=cyan,minimum size=.65cm,inner sep=0pt}};
       %node（テキストボックス的な）を指定座標に配置
-      \node[inner sep=0pt] at (A) {\includegraphics[width=1cm]{pic/Logo.png}};
-      \node[block] at (B) {\scriptsize MeCafe};
-      \node[block] at (C) {\scriptsize メカ研};
-      \node[block,fill=LightUIRed] at (D) {\scriptsize 電研};
-      \node[block] at (E) {\scriptsize シス研};
-      \node[block] at (F) {\scriptsize 情研};
+      \node[inner sep=0pt] at (A) {\includegraphics[width=.7cm]{pic/Logo.png}};
+      \node[block] at (B) {\tiny MeCafe};
+      \node[block] at (C) {\tiny メカ研};
+      \node[block,fill=LightUIRed] at (D) {\tiny 電研};
+      \node[block] at (E) {\tiny シス研};
+      \node[block] at (F) {\tiny 情研};
     \end{tikzpicture}
   \end{textblock*}
 \end{frame}
 
 \begin{frame}{TechRingを創る仲間たち その４}{システム開発研究会}
+  
+  \vspace{-2mm}
   
   \begin{minipage}{0.85\textwidth}
     \begin{block}{活動内容}
@@ -534,26 +621,37 @@
   \end{minipage}
 
   \begin{footnotesize}
-    \begin{columns}
-      \begin{column}{.18\textwidth}
-        \includegraphics[scale=0.5]{pic/shisuken1.png}
+    \begin{columns}[T,totalwidth=1.01\textwidth]
+      \begin{column}{.20\textwidth}
+        \begin{center}
+          \alert{モデリング}\\
+          \includegraphics[scale=0.5]{pic/shisuken1.png}
+        \end{center}
       \end{column}
-      \begin{column}{.18\textwidth}
-        \includegraphics[scale=0.4]{pic/shisuken2.png}
+      \begin{column}{.20\textwidth}
+        \begin{center}
+          \alert{ロボット}\\
+          \includegraphics[scale=0.5,angle=30]{pic/shisuken2.png}
+        \end{center}
       \end{column}
-      \begin{column}{.18\textwidth}
-        \begin{flushleft}
+      \begin{column}{.20\textwidth}
+        \begin{center}
+          \alert{電子工作}\\
+          \vspace{1mm}
           \includegraphics[scale=0.4]{pic/shisuken3.png}
-        \end{flushleft}
+        \end{center}
       \end{column}
-      \begin{column}{.18\textwidth}
-        \includegraphics[scale=0.5]{pic/shisuken4.png}
+      \begin{column}{.20\textwidth}
+        \begin{center}
+          \alert{プログラミング}\\
+          \includegraphics[scale=0.3]{pic/shisuken5.png}
+        \end{center}
       \end{column}
-      \hspace{-1mm}
-      \begin{column}{.18\textwidth}
-       \begin{flushleft}
-         \includegraphics[scale=0.4]{pic/shisuken5.png}
-       \end{flushleft}
+      \begin{column}{.20\textwidth}
+        \begin{center}
+          \alert{3Dプリンタ}\\
+          \includegraphics[scale=0.45]{pic/shisuken4.png}
+        \end{center}
       \end{column}
     \end{columns}
   \end{footnotesize}
@@ -583,7 +681,10 @@
 \end{frame}
 
 \begin{frame}{TechRingを創る仲間たち その５}{情報処理研究会}
-  \begin{columns}
+  
+  \vspace{-2mm}
+
+  \begin{columns}[totalwidth=\textwidth]
     \begin{column}{0.4\textwidth}
       \begin{block}{活動内容}
         \begin{itemize}
@@ -594,9 +695,7 @@
       \end{block}
     \end{column}
     \begin{column}{0.5\textwidth}
-      \begin{center}
-        \includegraphics[width=4cm]{pic/joken.png}
-      \end{center}
+      \includegraphics[scale=.13]{pic/joken.png}
     \end{column}
   \end{columns}
 
