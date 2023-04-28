@@ -411,7 +411,7 @@
 \end{frame}
 
 \begin{frame}{TechRingを創る仲間たち その１}{MeCafe}
-  機械研究会にフォーカス\\
+  MeCafeにフォーカス\\
   活動の紹介と出展の紹介を
   \begin{textblock*}{0.4\linewidth}(280pt,180pt)
     \begin{tikzpicture}[scale=1]
@@ -438,10 +438,38 @@
 \end{frame}
 
 \begin{frame}{TechRingを創る仲間たち その２}{機械研究会}
-  MeCafeにフォーカス\\
-  活動の紹介と出展の紹介を
-  \begin{textblock*}{0.4\linewidth}(280pt,180pt)
-    \begin{tikzpicture}[scale=1]
+
+  \vspace{-2mm}
+  
+  \begin{minipage}{0.85\textwidth}
+    \begin{block}{活動内容}
+      \begin{itemize}
+        \item Nゲージジオラマの製作
+        \item HOゲージ車両の作成
+      \end{itemize}
+    \end{block}
+  \end{minipage}
+
+  \vspace{3mm}
+
+  出展物：\alert{京都天橋立 ジオラマ}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[scale=0.45]{pic/mekaken1.jpg}
+    \end{column}
+    \begin{column}{0.22\textwidth}
+      \includegraphics[scale=0.45]{pic/mekaken2.jpg}\\
+      \includegraphics[scale=0.45]{pic/mekaken3.jpg}
+    \end{column}
+    \begin{column}{0.25\textwidth}
+      \includegraphics[scale=0.45]{pic/mekaken4.jpg}\\
+      \includegraphics[scale=0.45]{pic/mekaken5.jpg}
+    \end{column}
+  \end{columns}
+
+  \begin{textblock*}{0.4\linewidth}(300pt,5pt)
+    \begin{tikzpicture}[scale=.8]
       %座標設定
       \coordinate (A) at (0,-.1);
       \coordinate (B) at (0,1);
@@ -452,14 +480,14 @@
       %線引き
       \draw[line width = 2pt] (F)--(B)--(C)--(D)--(E)--cycle;
       %nodeのスタイル指定
-      \tikzset{block/.style={circle,white,fill=cyan,minimum size=.85cm,inner sep=0pt}};
+      \tikzset{block/.style={circle,white,fill=cyan,minimum size=.65cm,inner sep=0pt}};
       %node（テキストボックス的な）を指定座標に配置
-      \node[inner sep=0pt] at (A) {\includegraphics[width=1cm]{pic/Logo.png}};
-      \node[block] at (B) {\scriptsize MeCafe};
-      \node[block,fill=LightUIRed] at (C) {\scriptsize メカ研};
-      \node[block] at (D) {\scriptsize 電研};
-      \node[block] at (E) {\scriptsize シス研};
-      \node[block] at (F) {\scriptsize 情研};
+      \node[inner sep=0pt] at (A) {\includegraphics[width=.7cm]{pic/Logo.png}};
+      \node[block] at (B) {\tiny MeCafe};
+      \node[block,fill=LightUIRed] at (C) {\tiny メカ研};
+      \node[block] at (D) {\tiny 電研};
+      \node[block] at (E) {\tiny シス研};
+      \node[block] at (F) {\tiny 情研};
     \end{tikzpicture}
   \end{textblock*}
 \end{frame}
@@ -492,10 +520,46 @@
 \end{frame}
 
 \begin{frame}{TechRingを創る仲間たち その４}{システム開発研究会}
-  システム開発研究会にフォーカス\\
-  活動の紹介
-  \begin{textblock*}{0.4\linewidth}(280pt,180pt)
-    \begin{tikzpicture}[scale=1]
+  
+  \begin{minipage}{0.85\textwidth}
+    \begin{block}{活動内容}
+      \begin{itemize}
+        \item 興味関心を深め知識技術を身に着ける！
+        \item 高専祭での展示
+        \item 小中学生向けロボット教室
+        \item WRO（LEGOによるロボコン）
+        \item 地域との共同企画
+      \end{itemize}
+    \end{block}
+  \end{minipage}
+
+  \begin{footnotesize}
+    \begin{columns}
+      \begin{column}{.18\textwidth}
+        \includegraphics[scale=0.5]{pic/shisuken1.png}
+      \end{column}
+      \begin{column}{.18\textwidth}
+        \includegraphics[scale=0.4]{pic/shisuken2.png}
+      \end{column}
+      \begin{column}{.18\textwidth}
+        \begin{flushleft}
+          \includegraphics[scale=0.4]{pic/shisuken3.png}
+        \end{flushleft}
+      \end{column}
+      \begin{column}{.18\textwidth}
+        \includegraphics[scale=0.5]{pic/shisuken4.png}
+      \end{column}
+      \hspace{-1mm}
+      \begin{column}{.18\textwidth}
+       \begin{flushleft}
+         \includegraphics[scale=0.4]{pic/shisuken5.png}
+       \end{flushleft}
+      \end{column}
+    \end{columns}
+  \end{footnotesize}
+
+  \begin{textblock*}{0.4\linewidth}(300pt,5pt)
+    \begin{tikzpicture}[scale=.8]
       %座標設定
       \coordinate (A) at (0,-.1);
       \coordinate (B) at (0,1);
@@ -506,23 +570,71 @@
       %線引き
       \draw[line width = 2pt] (F)--(B)--(C)--(D)--(E)--cycle;
       %nodeのスタイル指定
-      \tikzset{block/.style={circle,white,fill=cyan,minimum size=.85cm,inner sep=0pt}};
+      \tikzset{block/.style={circle,white,fill=cyan,minimum size=.65cm,inner sep=0pt}};
       %node（テキストボックス的な）を指定座標に配置
-      \node[inner sep=0pt] at (A) {\includegraphics[width=1cm]{pic/Logo.png}};
-      \node[block] at (B) {\scriptsize MeCafe};
-      \node[block] at (C) {\scriptsize メカ研};
-      \node[block] at (D) {\scriptsize 電研};
-      \node[block,fill=LightUIRed] at (E) {\scriptsize シス研};
-      \node[block] at (F) {\scriptsize 情研};
+      \node[inner sep=0pt] at (A) {\includegraphics[width=.7cm]{pic/Logo.png}};
+      \node[block] at (B) {\tiny MeCafe};
+      \node[block] at (C) {\tiny メカ研};
+      \node[block] at (D) {\tiny 電研};
+      \node[block,fill=LightUIRed] at (E) {\tiny シス研};
+      \node[block] at (F) {\tiny 情研};
     \end{tikzpicture}
   \end{textblock*}
 \end{frame}
 
 \begin{frame}{TechRingを創る仲間たち その５}{情報処理研究会}
-  情報処理研究会にフォーカス\\
-  活動の紹介と出展の紹介を
-  \begin{textblock*}{0.4\linewidth}(280pt,180pt)
-    \begin{tikzpicture}[scale=1]
+  \begin{columns}
+    \begin{column}{0.4\textwidth}
+      \begin{block}{活動内容}
+        \begin{itemize}
+          \item 各種コンテスト参加
+          \item 講習会の実施
+          \item 自作PCの組み立て
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=4cm]{pic/joken.png}
+      \end{center}
+    \end{column}
+  \end{columns}
+
+  \vspace{-2mm}
+
+  \begin{columns}
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Super Hyper Paint}
+        \begin{footnotesize}
+          \begin{description}
+            \item[使用言語] Java
+            \item[機能] ファイルの作成\\読み込み 保存\\上書き保存 図形\\
+            元に戻す 色反転\\白黒化 虹色ペン\\消しゴム 色の選択\\塗りつぶし 文字入力\\レイヤー機能 ヒント
+          \end{description}
+        \end{footnotesize}
+      \end{alertblock}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{徹夜報告書|Midnight Report}
+        \begin{footnotesize}
+          \begin{description}[ゲームエンジン]
+            \item[ゲームエンジン] UE4 v4.26
+            \item[モデリング] Blender
+            \item[画像処理] Gimp
+            \item[音声作成] GarageBand 
+          \end{description}
+          \begin{itemize}
+            \item 素材のほぼすべてを独自で制作
+            \item Steamにて販売
+            \item あのガッチマンもプレイした！？
+          \end{itemize}
+        \end{footnotesize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+
+  \begin{textblock*}{0.4\linewidth}(300pt,5pt)
+    \begin{tikzpicture}[scale=.8]
       %座標設定
       \coordinate (A) at (0,-.1);
       \coordinate (B) at (0,1);
@@ -533,14 +645,14 @@
       %線引き
       \draw[line width = 2pt] (F)--(B)--(C)--(D)--(E)--cycle;
       %nodeのスタイル指定
-      \tikzset{block/.style={circle,white,fill=cyan,minimum size=.85cm,inner sep=0pt}};
+      \tikzset{block/.style={circle,white,fill=cyan,minimum size=.65cm,inner sep=0pt}};
       %node（テキストボックス的な）を指定座標に配置
-      \node[inner sep=0pt] at (A) {\includegraphics[width=1cm]{pic/Logo.png}};
-      \node[block] at (B) {\scriptsize MeCafe};
-      \node[block] at (C) {\scriptsize メカ研};
-      \node[block] at (D) {\scriptsize 電研};
-      \node[block] at (E) {\scriptsize シス研};
-      \node[block,fill=LightUIRed] at (F) {\scriptsize 情研};
+      \node[inner sep=0pt] at (A) {\includegraphics[width=.7cm]{pic/Logo.png}};
+      \node[block] at (B) {\tiny MeCafe};
+      \node[block] at (C) {\tiny メカ研};
+      \node[block] at (D) {\tiny 電研};
+      \node[block] at (E) {\tiny シス研};
+      \node[block,fill=LightUIRed] at (F) {\tiny 情研};
     \end{tikzpicture}
   \end{textblock*}
 \end{frame}
